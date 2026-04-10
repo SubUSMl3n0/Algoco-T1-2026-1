@@ -1,0 +1,12 @@
+\begin{mdframed}
+    \textbf{La extensión máxima para esta sección es un párrafo breve (máximo 1/4 de página).}
+\end{mdframed}
+
+En base a los resultados obtenidos, se observan las siguientes cosas:
+\begin{itemize}
+    \item Para el ordenamiento de arreglos el comportamiento de los algoritmos se mantiene consistente para los distintos tipos de entrada: los tiempos de ejecución son similares entre los casos ascendentes, aleatorios y descendentes, pero Quick Sort se demora considerablemente más que Merge Sort y std::sort, mientras que en memoria Merge utiliza más espacio y los otros dos se mantienen básicamente in-place.
+    Esto coincide con las cotas teóricas esperadas, donde el tiempo promedio es $O(n \log n)$, pero Quick puede caer a $O(n^2)$, y Merge requiere espacio adicional de $O(n)$. 
+    
+    \item Para multiplicación de matrices, los gráficos muestran una contradicción con la teoría, ya que Naive termina usando menos tiempo y memoria que Strassen aun cuando sus órdenes son $O(n^3)$ y $O(n^{2.87})$ respectivamente; la explicación más realista es una implementación defectuosa de Strassen (por ejemplo, copias innecesarias y un manejo ineficiente de submatrices), por lo que debe ser revisada y validada con matrices mucho más grandes, donde el overhead deje de dominar y Strassen pueda opacar por completo a Naive.
+
+\end{itemize}

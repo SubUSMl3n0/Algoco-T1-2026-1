@@ -1,0 +1,9 @@
+En este experimento se utilizó un computador con las siguientes características: procesador Intel Core i5 1235U (10 núcleos, hasta 4.4 GHz), 12 GB de RAM DDR4 3200 MHz, Windows 11 con WSL2 (Ubuntu 24.04 LTS) y compilación con g++ 12.4.0.
+
+Para evaluar el rendimiento, se trabajó con los datasets descritos en el enunciado y se generaron $3$ instancias por combinación.
+\begin{itemize}
+    \item \textbf{Arreglos unidimensionales:} tamaños $n \in \{10, 10^3, 10^5, 10^7\}$, con entradas ascendentes, descendentes y aleatorias, y valores en los dominios $D1$ (de $0$ a $9$) y $D7$ (de $0$ a $10^7$). Se comparó Quick Sort (pivote aleatorio y partición de Hoare), Merge Sort y std::sort.
+    \item \textbf{Multiplicación de matrices:} pares de matrices cuadradas con tamaños $n \in \{2^4, \ldots, 2^{10}\}$, con estructuras densa, diagonal o dispersa, y dominios $D0$ y $D10$. Se compararon los algoritmos Naive y Strassen.
+\end{itemize}
+
+A excepción de std::Sort, todo algoritmo implementado fue obtenido en la página de Geeks For Geeks
